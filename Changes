@@ -1,0 +1,5 @@
+Revision history for Perl extension Mail::FilterXML.
+
+0.1  Mon Jul 24 18:59:26 2000
+	- Converted from script to module.
+

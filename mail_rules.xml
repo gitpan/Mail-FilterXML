@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!-- this file demonstrates everything that Mail::FilterXML supports.  I will add and refine :) -->
+<MailAuditor>
+	<Config maildir="/tmp" logfile="/tmp/maillog" folder_suffix=".folder" junkfolder="JUNK"/>
+	<Rule type="from" content="matt@xmlglobal.com" folder="MATTHEW MACKENZIE" />
+	<Rule type="from" content="matt@goxml.com" folder="MATTHEW MACKENZIE" />
+	<Rule type="from" content="foo.com" folder="Foo and Co" />
+	<Rule type="from" content="perl-xml" folder="PERL-XML" />
+	<Rule type="from" content="redhat.com" folder="Read Later" />
+	<Rule type="from" content="resume" folder="HR" />
+	<Rule type="from" content="cvs.foo.com" folder="CVS MESSAGES" />
+	<Rule type="from" content="Resume" folder="HR" />
+	<Rule type="to" content="perl-xml" folder="PERL-XML" />
+	<Rule type="to" content="memos@goxml.com" folder="MEMOS" />
+	<Rule type="subj-ignore" content="OASIS" folder="JUNK" />
+	<Rule type="recip-ignore" content="dumbass.com" folder="JUNK" />
+	<Rule type="recip-ignore" content="axkit" folder="AXKIT" />
+	<Rule type="recip-ignore" content="sergeant" folder="AXKIT" />
+	<Rule type="recip-ignore" content="MAILER-DAEMON" folder="JUNK" />
+</MailAuditor>
