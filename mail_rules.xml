@@ -1,20 +1,12 @@
 <?xml version="1.0"?>
-<!-- this file demonstrates everything that Mail::FilterXML supports.  I will add and refine :) -->
+
 <MailAuditor>
-	<Config maildir="/tmp" logfile="/tmp/maillog" folder_suffix=".folder" junkfolder="JUNK"/>
-	<Rule type="from" content="matt@xmlglobal.com" folder="MATTHEW MACKENZIE" />
-	<Rule type="from" content="matt@goxml.com" folder="MATTHEW MACKENZIE" />
-	<Rule type="from" content="foo.com" folder="Foo and Co" />
-	<Rule type="from" content="perl-xml" folder="PERL-XML" />
-	<Rule type="from" content="redhat.com" folder="Read Later" />
-	<Rule type="from" content="resume" folder="HR" />
-	<Rule type="from" content="cvs.foo.com" folder="CVS MESSAGES" />
-	<Rule type="from" content="Resume" folder="HR" />
-	<Rule type="to" content="perl-xml" folder="PERL-XML" />
-	<Rule type="to" content="memos@goxml.com" folder="MEMOS" />
-	<Rule type="subj-ignore" content="OASIS" folder="JUNK" />
-	<Rule type="recip-ignore" content="dumbass.com" folder="JUNK" />
-	<Rule type="recip-ignore" content="axkit" folder="AXKIT" />
-	<Rule type="recip-ignore" content="sergeant" folder="AXKIT" />
-	<Rule type="recip-ignore" content="MAILER-DAEMON" folder="JUNK" />
+	<Config logfile="/tmp/maillog" junkfolder="JUNK" />
+	<Rule type="from" content="ebs@nersp.nerdc.ufl.edu" folder="inbox" action_cmd="/bin/echo" action_params="'crap from #from#' > /tmp/test.log" />
+	<Rule type="from" content="linkages@ufl.edu" folder="poo" />
+
+	<Rule type="from" content="joe@fuck.com" folder="inbox">
+            <action action_cmd="/usr/bin/X11/xmessage" action_params="-center -timeout 1 'New message from #from# concerning #subject#'" />
+            <action action_cmd="/bin/echo" action_params="'New message from #from# concerning #subject#' >> /tmp/test.log" />
+        </Rule>
 </MailAuditor>

@@ -21,11 +21,11 @@ FUTURE
     or altogether ignore messages, as possible in Mail::Audit. Any
     feedback or patches are welcome.
 
-AUTHOR
-    Matthew MacKenzie <mattmk@cpan.org>
-
+AUTHORS
+    Matthew MacKenzie <matt@geek.org>
+    Eli Ben-Shosan <eli@benshoshan.com
 COPYRIGHT
-    (c)2000 Matthew MacKenzie. You may use/copy this under the same
+    (c)2000-2002 Matthew MacKenzie. You may use/copy this under the same
     terms as Perl.
 
 SEE ALSO
